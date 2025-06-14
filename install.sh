@@ -14,15 +14,12 @@ mkdir ~/Videos
 # install applications
 pacman -Syu xorg xinit fastfetch feh rofi ttf-fira-code amixer brightnessctl git
 
-# install yay for aur
-git clone https://aur.archlinux.org/yay.git
-cd yay
+# install pokeget
+git clone https://aur.archlinux.org/pokeget.git
+cd pokeget
 makepkg -si
 cd ..
-rm -rf yay
-
-# install aur applications
-yay -Syu pokeget
+rm -rf pokeget
 
 # move config files to the correct directories
 cp -r dwm ~/.config/
