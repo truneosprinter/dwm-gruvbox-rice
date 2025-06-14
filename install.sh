@@ -24,11 +24,11 @@ cd ..
 rm -rf pokeget
 
 # move config files to the correct directories
-cp -r dwm ~/.config
-cp -r fastfetch ~/.config
-cp -r rofi ~/.config
-cp -r slstatus ~/.config
-cp -r st ~/.config
+cp -r dwm ~/.config/
+cp -r fastfetch ~/.config/
+cp -r rofi ~/.config/
+cp -r slstatus ~/.config/
+cp -r st ~/.config/
 cp fehbg ~/.fehbg
 cp xinitrc ~/.xinitrc
 cp wallpaper.png ~/.wallpaper.png
