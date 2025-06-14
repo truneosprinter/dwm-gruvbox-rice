@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Get volume level
 VOLUME=$(amixer -M get Master | grep -o '[0-9]*%' | head -1 | tr -d '%')
