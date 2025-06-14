@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # Get battery percentage and charging status
 BAT_PATH="/sys/class/power_supply/BAT0"
