@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 BRIGHTNESS="$(cat /sys/class/backlight/intel_backlight/brightness)"
 MAXBRIGHTNESS="$(cat /sys/class/backlight/intel_backlight/max_brightness)"
