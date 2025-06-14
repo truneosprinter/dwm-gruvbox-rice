@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # truneosprinter 2025
-# dwm gruvbox rice install script (run as super user!)
+# dwm gruvbox rice install script
+
+CURRENTDIR="$PWM"
 
 # create home directories
 mkdir ~/Desktop
@@ -12,7 +14,7 @@ mkdir ~/Music
 mkdir ~/Videos
 
 # install applications
-pacman -Syu xorg xinit fastfetch feh rofi ttf-fira-code amixer brightnessctl git
+sudo pacman -Syu xorg xorg-xinit fastfetch feh rofi ttf-fira-code alsa-utils brightnessctl git
 
 # install pokeget
 git clone https://aur.archlinux.org/pokeget.git
@@ -22,7 +24,7 @@ cd ..
 rm -rf pokeget
 
 # move config files to the correct directories
-cp -r dwm ~/.config/
+cp -r dwm ~/.config
 cp -r fastfetch ~/.config
 cp -r rofi ~/.config
 cp -r slstatus ~/.config
@@ -30,6 +32,20 @@ cp -r st ~/.config
 cp fehbg ~/.fehbg
 cp xinitrc ~/.xinitrc
 cp wallpaper.png ~/.wallpaper.png
-cp issue /etc/issue
+sudo cp issue /etc/issue
+
+# compile dwm
+cd ~/.config/dwm
+sudo make clean install
+
+# compile slstatus
+cd ~/.config/slstatus
+sudo make clean install
+
+# compile st
+cd ~/.config/st
+sudo make clean install
+
+cd $CURRENTDIR
 
 echo "Installation complete: you can now restart your computer!"
