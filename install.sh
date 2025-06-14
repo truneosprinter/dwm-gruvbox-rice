@@ -34,6 +34,9 @@ cp xinitrc ~/.xinitrc
 cp wallpaper.png ~/.wallpaper.png
 sudo cp issue /etc/issue
 
+# add autostart to bashrc
+echo '[[ -z "$DISPLAY" && "$(tty)" = "/dev/tty1" ]] && startx || { echo ""; fastfetch; echo ""; }' >> ~/.bashrc
+
 # compile dwm
 cd ~/.config/dwm
 sudo make clean install
