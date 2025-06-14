@@ -11,7 +11,7 @@ If you are ok with that, please run
 
 to make the install file executable, and then run yhe install file as non-root user with the command:
 
-  ```install.sh```
+  ```./install.sh```
 
 It is better with a fresh install of archlinux!
 
